@@ -14,12 +14,13 @@ body{
     --background-colour: #EFEFEF;
     --accent-background: #02078b;
     --accent-colour: rgb(0, 162, 255);
-    --card-background: #CBCBCB;
-    --card-hover: rgba(0, 0, 0, 0.3);
-    --cross-circle-active: rgb(58, 58, 58);
-    --cross-circle: black;
-    --cross-colour: white;
-    --transition-delay: 0.3s;
+    --card-background: #a7a9aa;
+    --card-hover: #8f8c8c;
+    --card-border: rgba(0, 0, 0, 0.2);
+    --hover: rgba(0, 0, 0, 0.9);
+    --arrow-circle: black;
+    --arrows: white;
+    --transition-delay: 0.2s;
 
     background-color: var(--background-colour);
     color:var(--text-colour);
@@ -31,11 +32,13 @@ body.dark{
     --accent-background: #010469;
     --accent-colour: rgb(0, 150, 240);
     --card-background: #333;
-    --card-hover: rgba(255, 255, 255, 0.3);
-    --cross-circle-active: #8b8b8b;
-    --cross-circle: #777;
-    --cross-colour: white;
-    --transition-delay: 0.3s;
+    --transition-delay: 0.2s;
+    --card-border: rgba(255, 255, 255, 0.2);
+    --card-hover: #fff;
+    --hover: rgba(255, 255, 255, 0.9);
+    --arrow-circle: white;
+    --arrows: black;
+    
 
 }
 
@@ -134,7 +137,6 @@ header .logo{
 } 
 @media (max-width:1120px) {
 header {
-    /* padding: 2%; */
     transition: 0.3 ease;
 }
 .nav-link {
@@ -274,263 +276,7 @@ header .nav-link {
                 inset -2px 2px rgba(255,255,255,1);
     background: linear-gradient(to bottom,#eaeaea,#f9f9f9);            
 } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* page 3 */
-/*####################################################################################*/
-.page3-landingpage{
-    width: 100%;
-    height: 80vh;
-    padding-top: 100px;
-    background:linear-gradient(rgb(0, 162, 255, 0.1),rgba(0,0,0,0.5)),url(./images/background.png);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-.page3-landingpage::before{
-    content: "";
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 200px;
-    background: var(--background-colour);
-    clip-path: polygon(100% 40%,0 100%,100% 100%);
-} 
-.landingpage3_text{
-    position: relative;
-    max-width: 900px;
-    text-align: center;
-    color: #fff;
-}
-.landingpage3_text h1{
-    /* margin: 0; */
-    font-size: 70px;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-}
-.landingpage3_text p{
-    margin: 10px 10px 30px;
-    font-size: clamp(1.25rem, 0.625rem + 1.4286vw, 1.875rem);
-    line-height: 1.5;
-}
-/*----------------------------------------------------------------------------------------------*/
-.page3-section-1{
-    margin-top: 50px;
-    padding: 15px 9%;
-}
-.page3-section-1 h1{
-    padding-bottom: 20px;
-    text-align: center;
-    font-size: 50px;
-    text-shadow: 0 5px 10px var(--card-hover);
-    color: var(--text-colour);
-}
-.page3-section-1 p{
-    margin: 10px 10px 30px;
-    text-align: center;
-    font-size: clamp(0.9375rem, -1.25rem + 5vw, 1.5625rem);
-    color: var(--text-colour);
-}
-
-
-.Response-container{
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 60px;
-    place-items: center;
-}
-.Response-container.active{
-    filter: blur(4px);
-    pointer-events: none;
-}
-
-.page3-section-1 h1.active{
-    filter: blur(4px);
-}
-
-.page3-section-1 p.active{
-    filter: blur(4px);
-}
-
-
-.Response{
-    box-shadow: 0 5px 10px var(--card-hover);
-    border-radius: 5px;
-    padding: 30px 20px;
-    text-align: center;
-    transition: 0.3s;
-}
-.Response h3{
-    font-size: clamp(1.375rem, -0.375rem + 4vw, 1.875rem);
-    padding: 10px 0;
-    color: var(--text-colour);
-}
-.circle-bullets{
-    margin: 20px 80px;
-    text-align: left;
-    font-size: clamp(0.9375rem, -0.1563rem + 2.5vw, 1.25rem);
-}
-.circle-bullets li{
-    padding: 20px 0;
-    color: var(--text-colour);
-}
-
-.Response .Response-btn{
-    margin-top: 15px;
-    color: #fff;
-    display: inline-block;
-    font-size: 17px;
-    border-radius: 5px;
-    padding: 8px 25px;
-    background: #518cd4;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.Response img{
-    height: 100px;
-}
-.Response .Response-btn:hover{
-    background: #3f6fa8;
-}
-.Response .Response-btn:active{
-    background: #2e5b8f;
-}
-.Response:hover{
-    transform: scale(1.03);
-    border: 2px solid var(--text-colour);
-}
-
-.popup{
-    margin: 100px auto;
-    position: relative;
-}
-
-.popup .content{
-    position: absolute;
-    margin-top: 200px;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    text-align: center;
-    background: var(--card-background);
-    width: 100%;
-    z-index: 1;
-    padding: 30px;
-    border-radius: 6px;
-}
-.popup .content h1{
-    top: 1%;
-    font-size: clamp(1.25rem, -0.9375rem + 5vw, 1.875rem);
-    margin-bottom: 10px;
-    color: var(--text-colour);
-}
-
-.popup .content p{
-    font-size: clamp(0.9375rem, -0.1563rem + 2.5vw, 1.25rem);
-    line-height: 1.4;
-    margin-bottom: 10px;
-    color: var(--text-colour);
-}
-
-.popup .close-btn{
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: var(--cross-circle);
-    color: var(--cross-colour);
-    font-size: 25px;
-    font-weight: 600;
-    line-height: 30px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.popup .close-btn:hover{
-    background: var(--cross-circle-active);
-}
-
-.popup.active .content{
-    transition: all 400ms ease-in-out;
-    transform: translate(-50%, -50%) scale(1);
-}
-
-@media screen and (max-width: 1250px) {
-    .Response-container{
-        grid-template-columns: repeat(1,1fr);
-    }
-    .popup .content{
-        margin-top: 600px;
-    }
-}
-@media screen and (max-width: 1000px) {
-    .circle-bullets{
-    margin: 0 40px;
-    }
-    .Response-container{
-        grid-template-columns: repeat(1,1fr);
-    }
-}
-@media screen and (max-width: 500px) {
-    .circle-bullets{
-        margin-top: 30px;
-        }
-    .circle-bullets li{
-        padding: 10px 0;
-    }
-    .popup .content{
-        padding: 30px 5px;
-    }
-}
-/*----------------------------------------------------------------------------------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ------------------------------------------------------------------------------------- */
 
 
 
@@ -573,7 +319,7 @@ footer{
     width: 100%;
     height: auto;
     background: #112b54;
-    margin-top: 50px;
+    margin-top: 40px; 
 }
 .footer-content{
     display: flex;

@@ -12,13 +12,12 @@
 body{
     --text-colour: black;
     --background-colour: #EFEFEF;
-    --menu-background: #000235;
     --accent-background: #02078b;
     --accent-colour: rgb(0, 162, 255);
     --card-background: #a7a9aa;
     --card-hover: #8f8c8c;
     --card-border: rgba(0, 0, 0, 0.2);
-    --hover: rgba(0, 0, 0, 0.8);
+    --hover: rgba(0, 0, 0, 0.9);
     --arrow-circle: black;
     --arrows: white;
     --transition-delay: 0.2s;
@@ -30,14 +29,13 @@ body{
 body.dark{
     --text-colour: white;
     --background-colour: #121212;
-    --menu-background: #191C67;
     --accent-background: #010469;
     --accent-colour: rgb(0, 150, 240);
     --card-background: #333;
     --transition-delay: 0.2s;
     --card-border: rgba(255, 255, 255, 0.2);
     --card-hover: #fff;
-    --hover: rgba(255, 255, 255, 0.8);
+    --hover: rgba(255, 255, 255, 0.9);
     --arrow-circle: white;
     --arrows: black;
     
@@ -54,13 +52,13 @@ header{ /* navigation bar */
     left: 0;
     top: 0;
     right: 0;
-    background-color: var(--menu-background);
+    background-color: #112b54;
     padding: 20px 2%;
     z-index: 999;
 }
 header .logo{
     font-size: clamp(1.5625rem, 0.4688rem + 2.5vw, 1.875rem);
-    color: #fff;
+    color: white;
     letter-spacing: 2px;
     text-transform: uppercase;
     cursor: pointer;
@@ -153,7 +151,7 @@ header nav {
     left: -100%;
     top: 100%;
     right: 0;
-    background-color: var(--menu-background);
+    background-color: #112b54;
     padding: 20px;
     border-radius: 10px;
     transition: 0.3 ease;
@@ -205,7 +203,7 @@ header .nav-link {
     width: 20rem;
     top: 100%;
     right: -100%;
-    background-color: var(--menu-background);
+    background-color: #112b54;
     padding: 30px 50px;
     border-radius: 20px;
     gap: 10px;
@@ -423,6 +421,7 @@ header .nav-link {
     /* font-size: 60px; */
     letter-spacing: 4px;
     position: relative;
+    color: var(--text-colour);
 }
 .cards{
     display: grid;
@@ -483,7 +482,7 @@ header .nav-link {
 .card:hover{
     background-color: transparent;
     transform: translateY(-8px);
-    border-color: #0050a5;
+    border-color: #007aff;
 }
 .card:hover i{
     color: #007aff;
@@ -525,11 +524,20 @@ header .nav-link {
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
     transition: 0.5s;
 }
-
-/* .slider .slides img{
-    max-width: 100%;
-    height: auto;
-} */
+.slider .slides .image-link{
+    position: absolute;
+    opacity: 1;
+    font-size: clamp(0.9375rem, -2.3438rem + 7.5vw, 1.875rem);
+    color: #fff;
+    left: 40px;
+    bottom: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.slider .slides .image-link span{
+    text-decoration: underline;
+    color: #0097ee;
+}
 
 .slider .slides:nth-child(1),
 .slider .slides:nth-child(2){
@@ -547,17 +555,29 @@ header .nav-link {
     background-size: cover;
     left: calc(50% + 500px);
 }
+.slider .slides:nth-child(3) .image-link{
+    opacity: 0;
+}
 .slider .slides:nth-child(4){
     background-size: cover;
     left: calc(50% + 760px);
+}
+.slider .slides:nth-child(4) .image-link{
+    opacity: 0;
 }
 .slider .slides:nth-child(5){
     background-size: cover;
     left: calc(50% + 1020px);
 }
+.slider .slides:nth-child(5) .image-link{
+    opacity: 0;
+}
 .slider .slides:nth-child(6){
     background-size: cover;
     left: calc(50% + 1280px);
+    opacity: 0;
+}
+.slider .slides:nth-child(6) .image-link{
     opacity: 0;
 }
 .buttons{
@@ -628,7 +648,7 @@ header .nav-link {
         left: calc(50% + 205px);
     }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1100px) {
     .slider{
         inset: 40px 40px 200px 40px;
     }
@@ -657,6 +677,33 @@ header .nav-link {
         left: 360px;
     }
 }
+@media screen and (max-width: 768px) {
+    .home-section2-container{
+        height: 60vh;
+    }
+    .slider .slides{
+        height: 90px;
+        width: 90px;
+        bottom: -150px;
+    }
+    .slider{
+        inset: 5px 5px 200px 5px;
+    }
+    .buttons{
+        position: absolute;
+        bottom: 0px;
+        display: flex;
+        gap: 80px;
+    }
+    /* .buttons span{
+        height: 35px;
+        width: 35px;
+    }
+    .footer{
+        padding-top: 0px;
+    } */
+}
+
 /* for big phones */
 @media screen and (max-width: 450px) { 
     .home-section2-container{
@@ -705,14 +752,13 @@ header .nav-link {
 }
 
 
-
 /*-footer-*/
 /*####################################################################################*/
 footer{
     width: 100%;
     height: auto;
     background: #112b54;
-    margin-top: 40px;
+    margin-top: 40px; 
 }
 .footer-content{
     display: flex;

@@ -12,7 +12,6 @@
 body{
     --text-colour: black;
     --background-colour: #EFEFEF;
-    --menu-background: #000235;
     --accent-background: #02078b;
     --accent-colour: rgb(0, 162, 255);
     /* --grid-colour: #939292; */
@@ -30,7 +29,6 @@ body{
 body.dark{
     --text-colour: white;
     --background-colour: #121212;
-    --menu-background: #191C67;
     --accent-background: #010469;
     --accent-colour: rgb(0, 150, 240);
     /* --grid-colour: #333; */
@@ -53,7 +51,7 @@ header{ /* navigation bar */
     left: 0;
     top: 0;
     right: 0;
-    background-color: var(--menu-background);
+    background-color: #112b54;
     padding: 20px 2%;
     z-index: 999;
 }
@@ -152,7 +150,7 @@ header nav {
     left: -100%;
     top: 100%;
     right: 0;
-    background-color: var(--menu-background);
+    background-color: #112b54;
     padding: 20px;
     border-radius: 10px;
     transition: 0.3 ease;
@@ -204,7 +202,7 @@ header .nav-link {
     width: 20rem;
     top: 100%;
     right: -100%;
-    background-color: var(--menu-background);
+    background-color: #112b54;
     padding: 30px 50px;
     border-radius: 20px;
     gap: 10px;
@@ -331,6 +329,7 @@ header .nav-link {
     text-align: center;
     padding-bottom: 20px;
     font-size: 50px;
+    color: var(--text-colour);
     text-shadow: 0 5px 10px var(--card-hover);
 }
 .prevention-menu .prevention-box-container{
@@ -351,10 +350,12 @@ header .nav-link {
 .prevention-menu .prevention-box-container .prevention-box h3{
     font-size: clamp(1.375rem, -0.375rem + 4vw, 1.875rem);
     padding: 10px 0;
+    color: var(--text-colour);
 }
 .prevention-menu .prevention-box-container .prevention-box p{
     font-size: clamp(0.9375rem, -0.1563rem + 2.5vw, 1.25rem);
     line-height: 1.8;
+    color: var(--text-colour);
 }
 .prevention-menu .prevention-box-container .prevention-box .open-section-btn{
     margin-top: 15px;
@@ -369,7 +370,6 @@ header .nav-link {
 }
 .prevention-menu .prevention-box-container .prevention-box .open-section-btn:hover{
     background: #3f6fa8;
-    letter-spacing: 1px;
 }
 .prevention-menu .prevention-box-container .prevention-box:hover{
     transform: scale(1.03);
@@ -423,6 +423,7 @@ header .nav-link {
     margin: 0 20px;
     /* float: left; */
     padding: 20px 0;
+    color: var(--text-colour);
     /* margin-right: 10px; */
 }
 .password-info-text h1{
@@ -596,6 +597,7 @@ button[type ="submit"]:hover{
     text-align: center;
     position: absolute;
     top: 10px;
+    color: var(--text-colour);
 }
 .spot-the-difference-container{
     display: flex;
@@ -624,6 +626,7 @@ button[type ="submit"]:hover{
     position: absolute;
     bottom: 10px;
     font-weight: bold;
+    color: var(--text-colour);
 }
 #counter{
     color: red;
@@ -657,6 +660,7 @@ button[type ="submit"]:hover{
     font-size: clamp(1.875rem, -0.3125rem + 5vw, 2.5rem);
     top: 10px;
     margin-bottom: 20px;
+    color: var(--text-colour);
 }
 .page1-section-3 p{
     text-align: center;
@@ -665,6 +669,7 @@ button[type ="submit"]:hover{
     font-size: clamp(0.9375rem, -1.25rem + 5vw, 1.5625rem);
     top: 20px;
     margin-top: 50px;
+    color: var(--text-colour);
 }
 .videoGrid-container{
     margin-top: 100px;
@@ -679,6 +684,7 @@ button[type ="submit"]:hover{
 }
 .windowsVideo-container h2{
     margin-bottom: 10px;
+    color: var(--text-colour);
 }
 .MacVideo-container iframe{
     width: 560px;
@@ -686,6 +692,7 @@ button[type ="submit"]:hover{
 }
 .MacVideo-container h2{
     margin-bottom: 10px;
+    color: var(--text-colour);
 }
 
 @media screen and (max-width: 1220px) {
@@ -716,34 +723,22 @@ button[type ="submit"]:hover{
 	align-items: center;
 	justify-content: center;
     text-align: center;
-    /* background: white;
-    background: linear-gradient(
-        to right bottom,
-        rgba(255, 255, 255, 0.5),
-        rgba(255, 255, 255, 0.3)
-    );
-    backdrop-filter: blur(1rem);
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2); */
-	/* min-height: 100vh; */
-	/* padding: 2rem; */
 }
 .page1-section-4.active{
     display: flex;
 }
 .page1-section-4 h1{
-    /* position: absolute; */
+    color: var(--text-colour);
     text-align: center;
     font-size: clamp(1.875rem, -0.3125rem + 5vw, 2.5rem);
     top: 20px;
     margin-bottom: 20px;
 }
 .page1-section-4 p{
-    /* position: absolute; */
+    color: var(--text-colour);
     max-width: 1000px;
     text-align: center;
     font-size: clamp(0.9375rem, -1.25rem + 5vw, 1.5625rem);
-    /* top: 20px; */
-    /* margin-top: 50px; */
 }
 .AntiVirus-container{
     margin-top: 50px;
@@ -783,6 +778,7 @@ button[type ="submit"]:hover{
 .AntiVirus h3{
     font-size: 22px;
     padding: 10px 0;
+    color: var(--text-colour);
 }
 .AntiVirusLink-btn{
     margin-top: 10px;
@@ -833,34 +829,22 @@ button[type ="submit"]:hover{
 	align-items: center;
 	justify-content: center;
     text-align: center;
-    /* background: white;
-    background: linear-gradient(
-        to right bottom,
-        rgba(255, 255, 255, 0.5),
-        rgba(255, 255, 255, 0.3)
-    );
-    backdrop-filter: blur(1rem);
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2); */
-	/* min-height: 100vh; */
-	/* padding: 2rem; */
 }
 .page1-section-5.active{
     display: flex;
 }
 .page1-section-5 h1{
-    /* position: absolute; */
+    color: var(--text-colour);
     text-align: center;
     font-size: clamp(1.875rem, -0.3125rem + 5vw, 2.5rem);
     top: 20px;
     margin-bottom: 20px;
 }
 .page1-section-5 p{
-    /* position: absolute; */
+    color: var(--text-colour);
     max-width: 1000px;
     text-align: center;
     font-size: clamp(0.9375rem, -1.25rem + 5vw, 1.5625rem);
-    /* top: 20px; */
-    /* margin-top: 50px; */
 }
 
 .Firewall-container{
@@ -895,6 +879,7 @@ button[type ="submit"]:hover{
 .Firewall h3{
     font-size: 22px;
     padding: 10px 0;
+    color: var(--text-colour);
 }
 .FirewallLink-btn{
     margin-top: 10px;
@@ -944,29 +929,19 @@ button[type ="submit"]:hover{
 	align-items: center;
 	justify-content: center;
     text-align: center;
-    /* background: white; */
-    /* background: linear-gradient(
-        to right bottom,
-        rgba(255, 255, 255, 0.5),
-        rgba(255, 255, 255, 0.3)
-    );
-    backdrop-filter: blur(1rem);
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2); */
-	/* min-height: 100vh; */
-	/* padding: 2rem; */
 }
 .page1-section-6.active{
     display: flex;
 }
 .page1-section-6 h1{
-    /* position: absolute; */
+    color: var(--text-colour);
     text-align: center;
     font-size: clamp(1.875rem, -0.3125rem + 5vw, 2.5rem);
     top: 20px;
     margin-bottom: 20px;
 }
 .page1-section-6 p{
-    /* position: absolute; */
+    color: var(--text-colour);
     max-width: 1000px;
     text-align: center;
     font-size: clamp(0.9375rem, -1.25rem + 5vw, 1.5625rem);
@@ -1005,21 +980,12 @@ button[type ="submit"]:hover{
 .VPN h2{
     font-size: 22px;
     padding: 10px 0;
+    color: var(--text-colour);
 }
 .pros, .cons {
     margin: 10px;
     text-align: left;
 }
-/* .pros ul{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-.cons ul{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-} */
 .cons{
     margin-top: 15px;
 }
@@ -1033,6 +999,7 @@ button[type ="submit"]:hover{
 }
 .pros, .cons, li {
     margin-bottom: 5px;
+    color: var(--text-colour);
 }
 .VPNLink-btn{
     margin-top: 10px;
@@ -1047,7 +1014,6 @@ button[type ="submit"]:hover{
 }
 .VPNLink-btn:hover{
     background: #3f6fa8;
-    /* letter-spacing: 1px; */
 }
 
 

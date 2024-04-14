@@ -12,7 +12,6 @@
 body{
     --text-colour: black;
     --background-colour: #EFEFEF;
-    --menu-background: #000235;
     --accent-background: #02078b;
     --accent-colour: rgb(0, 162, 255);
     --card-background: #CBCBCB;
@@ -32,7 +31,6 @@ body{
 body.dark{
     --text-colour: white;
     --background-colour: #121212;
-    --menu-background: #191C67;
     --accent-background: #010469;
     --accent-colour: rgb(0, 150, 240);
     --card-background: #333;
@@ -54,7 +52,7 @@ header{ /* navigation bar */
     left: 0;
     top: 0;
     right: 0;
-    background-color: var(--menu-background);
+    background-color: #112b54;
     padding: 20px 2%;
     z-index: 999;
 }
@@ -153,7 +151,7 @@ header nav {
     left: -100%;
     top: 100%;
     right: 0;
-    background-color: var(--menu-background);
+    background-color: #112b54;
     padding: 20px;
     border-radius: 10px;
     transition: 0.3 ease;
@@ -205,7 +203,7 @@ header .nav-link {
     width: 20rem;
     top: 100%;
     right: -100%;
-    background-color: var(--menu-background);
+    background-color: #112b54;
     padding: 30px 50px;
     border-radius: 20px;
     gap: 10px;
@@ -356,12 +354,12 @@ header .nav-link {
     padding-bottom: 20px;
     font-size: 50px;
     text-shadow: 0 5px 10px var(--card-hover);
+    color: var(--text-colour);
 }
 .timeline-container{
     position: relative;
     padding: 10px 60px;
     width: 50%;
-    /* animation: movedown 1s linear forwards; */
     visibility: hidden;
     opacity: 0;
 }
@@ -401,7 +399,6 @@ header .nav-link {
 }
 
 
-
 .text-box{
     position: relative;
     padding: 20px 30px;
@@ -409,13 +406,15 @@ header .nav-link {
     font-size: 15px;
     background: var(--card-background);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+    /* box-shadow: rgba(20, 20, 20, 0.3) 0px 13px 27px -5px, rgba(0, 0, 0, 0.4) 0px 8px 16px -8px; */
 }
 .timeline-button{
     position: relative;
     width: 100px;
     height: 30px;
-    background: rgb(20, 167, 220);
-    border: 2px solid rgb(20, 167, 220);
+    background: #518cd4;
+    border: 2px solid #518cd4;
     border-radius: 6px;
     font-size: 16px;
     font-weight: 600;
@@ -424,10 +423,13 @@ header .nav-link {
     cursor: pointer;
     transition: 0.3s;
 }
-
 .timeline-button:hover{
-    background: rgba(19, 120, 156);
-    border-color: rgba(19, 120, 156);
+    background: #3f6fa8;
+    border-color: #3f6fa8;
+}
+.timeline-button:active{
+    background: #2e5b8f;
+    border-color: #2e5b8f;
 }
 .popup .content{
     position: absolute;
@@ -445,12 +447,14 @@ header .nav-link {
     top: 1%;
     font-size: clamp(1.25rem, -0.9375rem + 5vw, 1.875rem);
     margin-bottom: 10px;
+    color: var(--text-colour);
 }
 
 .popup .content p{
     font-size: clamp(0.9375rem, -0.1563rem + 2.5vw, 1.25rem);
     line-height: 1.4;
     margin-bottom: 10px;
+    color: var(--text-colour);
 }
 
 .popup .close-btn{
@@ -534,6 +538,7 @@ header .nav-link {
     font-weight: 600;
     font-size: clamp(1.875rem, 1.0417rem + 1.6667vw, 2.5rem);
     text-align: center;
+    color: var(--text-colour);
 }
 .left-container-arrow{
     height: 0;

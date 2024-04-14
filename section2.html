@@ -21,7 +21,8 @@
             <a href="section2.html" class="nav-link" > Detection </a>
             <a href="section3.html" class="nav-link" > Response </a>
             <a href="section4.html" class="nav-link" > Recovery </a>
-            <a href="quiz.html" class="nav-link" >Quiz </a>
+            <a href="guessing-game.html" class="nav-link" > Guessing Game</a>
+            <a href="Quiz.html" class="nav-link" >Quiz </a>
         </nav>
         <!-- hamburger menu -->
         <div class="toggle">
@@ -194,8 +195,7 @@
             <div class="popup" id="popup-6">
                 <div class="content">
                     <h1>Spoofing</h1>
-                    <p>
-                        A spoofing attack is a type of cyber attack where a malicious actor impersonates another entity or device on a network in order to deceive or manipulate users, systems, or services. This impersonation is typically achieved by falsifying data such as IP addresses, email addresses, or other identifying information to appear as though it is originating from a trusted or legitimate source.</p>
+                    <p> A spoofing attack is a type of cyber attack where a malicious actor impersonates another entity or device on a network in order to deceive or manipulate users, systems, or services. This impersonation is typically achieved by falsifying data such as IP addresses, email addresses, or other identifying information to appear as though it is originating from a trusted or legitimate source.</p>
                     <div class="close-btn">&times;</div>
                 </div>
             </div>
@@ -262,7 +262,6 @@
 
             const popup1 = document.getElementById("popup-1");
             const closebtn = document.querySelectorAll(".close-btn");
-            // const closebtn1 = document.getElementById("closebtn1");
             const timelinebutton1 = document.getElementById("timeline-button1");
             timelinebutton1.onclick = () => {
                 popup1.classList.add("active");
@@ -276,24 +275,6 @@
                 });
 
             }
-            closebtn.forEach(closebutton => {
-                closebutton.onclick = () => {
-                    popup1.classList.remove("active");
-                    popup2.classList.remove("active");
-                    popup3.classList.remove("active");
-                    popup4.classList.remove("active");
-                    popup5.classList.remove("active");
-                    popup6.classList.remove("active");
-                    line.classList.remove("active");
-                    title.classList.remove("active");
-                    Righttimeline.forEach(timeline => {
-                        timeline.classList.remove("active");
-                    });
-                    Lefttimeline.forEach(timeline => {
-                        timeline.classList.remove("active");
-                    });
-                };
-            });
 
             const popup2 = document.getElementById("popup-2");
             const closebtn2 = document.getElementById("closebtn2");
@@ -369,6 +350,25 @@
                     timeline.classList.add("active");
                 });
             }
+
+            closebtn.forEach(closebutton => {
+                closebutton.onclick = () => {
+                    popup1.classList.remove("active");
+                    popup2.classList.remove("active");
+                    popup3.classList.remove("active");
+                    popup4.classList.remove("active");
+                    popup5.classList.remove("active");
+                    popup6.classList.remove("active");
+                    line.classList.remove("active");
+                    title.classList.remove("active");
+                    Righttimeline.forEach(timeline => {
+                        timeline.classList.remove("active");
+                    });
+                    Lefttimeline.forEach(timeline => {
+                        timeline.classList.remove("active");
+                    });
+                };
+            });
         </script>
 
 

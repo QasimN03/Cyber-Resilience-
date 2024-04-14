@@ -10,7 +10,6 @@
 body{
     --text-colour: black;
     --background-colour: #EFEFEF;
-    --menu-background: #000235;
     --accent-background: #02078b;
     --accent-colour: rgb(0, 162, 255);
     --hover: rgba(0, 0, 0, 0.3);
@@ -24,7 +23,6 @@ body{
 body.dark{
     --text-colour: white;
     --background-colour: #121212;
-    --menu-background: #191C67;
     --accent-background: #010469;
     --accent-colour: rgb(0, 150, 240);
     --hover: rgba(255, 255, 255, 0.3);
@@ -41,7 +39,7 @@ header{ /* navigation bar */
     left: 0;
     top: 0;
     right: 0;
-    background-color: var(--menu-background);
+    background-color: #112b54;
     padding: 20px 2%;
     z-index: 999;
 }
@@ -141,7 +139,7 @@ header {
         left: -100%;
         top: 100%;
         right: 0;
-        background-color: var(--menu-background);
+        background-color: #112b54;
         padding: 20px;
         border-radius: 10px;
         transition: 0.3 ease;
@@ -196,7 +194,7 @@ header {
     width: 25rem;
     top: 100%;
     right: -100%;
-    background-color: var(--menu-background);
+    background-color: #112b54;
     padding: 30px 50px;
     border-radius: 20px;
     gap: 10px;
