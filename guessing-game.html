@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Cyber Resiliance Website</title>
+    <link rel="stylesheet" href="guessing-game.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <header>
+        <h1 class="logo">
+            <a href="index.html">Cyber Resilience</a>
+        </h1>
+        <nav>
+            <a href="section1.html" class="nav-link" > Prevention </a>
+            <a href="section2.html" class="nav-link" > Detection </a>
+            <a href="section3.html" class="nav-link" > Response </a>
+            <a href="section4.html" class="nav-link" > Recovery </a>
+            <a href="guessing-game.html" class="nav-link" > Guessing Game</a>
+            <a href="Quiz.html" class="nav-link" >Quiz </a>
+        </nav>
+        <div class="toggle">
+            <div class="menu-icon">
+                <span class="top"></span>
+                <span class="middle"></span>
+                <span class="end"></span>
+            </div>
+        </div>
+        
+        <img id="setting_icon" class="setting-icon" src="./images/setting.png">
+        
+        <div class="setting-page" id="setting_page">
+            <div>
+                <h1>Settings</h1>
+            </div>
+            <div class="mode-toggle">
+                <span id="darkmodetext">Dark Mode:</span>
+                <input type="checkbox" class="darkmode" id="darktoggle">
+            </div>
+        </div>
+    </header>
+    
+    <section class="hidden">
+        <div class="page5-section-1">
+            <div class="wrapper">
+                <h1>Guess the Word</h1>
+                <div class="content">
+                    <input type="text" class="typing-input" maxlength="1">
+                    <div class="inputs"></div>
+                    <div class="details">
+                        <p class="hint">Hint: <span></span></p>
+                        <p class="Guesses-Left">Remaining Guesses: <span> 10</span></p>
+                        <p class="wrong-letters"> Wrong Letters: <span></span></p>
+                    </div>
+                    <button class="reset-btn">Reset Game</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="words.js"></script>
+    <script>
+        const inputs = document.querySelector(".inputs");
+        const resetbtn = document.querySelector(".reset-btn");
+        const hint = document.querySelector(".hint span");
+        const wrongletter = document.querySelector(".wrong-letters span");
+        const GuessesLeft = document.querySelector(".Guesses-Left span");
+        const typinginput = document.querySelector(".typing-input");
+
+        let word, MaxGuesses, corrects = [], incorrects = [];
+
+        function randomWord() {
+            let ranobj = wordlist[Math.floor(Math.random() * wordlist.length)];
+            word = ranobj.word;
+            MaxGuesses = 8; corrects = []; incorrects = [];
+
+            hint.innerText = ranobj.hint;
+            GuessesLeft.innerText = MaxGuesses;
+            wrongletter.innerText = incorrects;
+
+            let html = "";
+            for (let i = 0; i < word.length; i++){
+                html += '<input type="text" disabled>';
+            }
+            inputs.innerHTML = html;
+        }
+        randomWord();
+
+        function initialisegame(e){
+            let key = e.target.value;
+            if(key.match(/^[A-Za-z]+$/) && !incorrects.includes(` ${key}`) && !corrects.includes(key)){
+                if(word.includes(key)){
+                    for (let i = 0; i < word.length; i++){
+                        if(word[i] === key){
+                            corrects.push(key);
+                            inputs.querySelectorAll("input")[i].value = key;
+                        }
+                    }
+                } else{
+                    MaxGuesses--;
+                    incorrects.push(` ${key}`);
+                }
+                GuessesLeft.innerText = MaxGuesses;
+                wrongletter.innerText = incorrects;
+            }
+            typinginput.value = "";
+
+            setTimeout(() => {
+                if (corrects.length === word.length) {
+                    alert(`congratulations! You found the word ${word.toUpperCase()}`);
+                    randomWord()
+                }
+                else if (MaxGuesses < 1) {
+                    alert("Game Over! You don't have remaining guesses");
+                    for (let i = 0; i < word.length; i++) {
+                        inputs.querySelectorAll("input")[i].value = word[i];
+                    }
+                }
+            });
+        }
+
+        resetbtn.addEventListener("click", randomWord);
+        typinginput.addEventListener("input", initialisegame);
+        inputs.addEventListener("click", () => typinginput.focus());
+        document.addEventListener("keydown", () => typinginput.focus());
+    </script>
+    
+<!----Footer---->
+<footer>
+    <div class="footer-content">
+        <h3>Cyber Resiliance</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dolor modi nobis aut sequi architecto rerum
+                expedita autem libero. Quis soluta neque corrupti vel minima voluptatum veniam ut nobis debitis!</p>
+        <ul class="socials">
+            <li><a href="https://github.com/QasimN03/Cyber-Resilience-.git" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright &copy; 2024 Cyber Resiliance. Designed by <span>Qasim Nazir (21380968)</span></p>
+    </div>
+</footer>
+
+<!----Javascript---->
+<script src="javascript.js"> </script>
+<script defer src="scroll.js"> </script>
+
+</body>
+<html>
