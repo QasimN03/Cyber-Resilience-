@@ -1,1 +1,2 @@
-# Cyber-Resilience-
+# Cyber Resilience Education Website
+This Website is a comprehensive online platform designed to empower individuals and organizations with the knowledge and skills necessary to navigate the complexity of cybersecurity threats. Through a combination of instructions, plans, and games, the website equips users with the ability to identify, mitigate, and respond to cyber risks effectively. With a user-friendly interface and up-to-date content, the Website serves as a vital resource for anyone seeking to enhance their cyber resilience and safeguard digital assets against evolving threats.
