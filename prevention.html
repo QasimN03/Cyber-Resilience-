@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Cyber Resiliance Website</title>
+    <link rel="stylesheet" href="prevention.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+</head>
+<body>
+    <header>
+        <h1 class="logo">
+            <a href="index.html">Cyber Resilience</a>
+        </h1>
+        <nav>
+            <a href="prevention.html" class="nav-link" > Prevention </a>
+            <a href="detection.html" class="nav-link" > Detection </a>
+            <a href="response.html" class="nav-link" > Response </a>
+            <a href="recovery.html" class="nav-link" > Recovery </a>
+            <a href="guessing-game.html" class="nav-link" > Guessing Game</a>
+            <a href="quiz.html" class="nav-link" >Quiz </a>
+        </nav>
+        <div class="toggle">
+            <div class="menu-icon">
+                <span class="top"></span>
+                <span class="middle"></span>
+                <span class="end"></span>
+            </div>
+        </div>
+        
+        
+        <img id="setting_icon" class="setting-icon" src="./images/setting.png">
+    
+        <div class="setting-page" id="setting_page">
+            <div>
+                <h1>Settings</h1>
+            </div>
+            <div class="mode-toggle">
+                <span id="darkmodetext">Dark Mode:</span>
+                <input type="checkbox" class="darkmode" id="darktoggle">
+            </div>
+        </div>
+    </header>
+
+    <section class="page1-landingpage">
+        <div class="landingpage1_text">
+            <h1>Prevention</h1>
+            <p>Implementing measures can remove or minimise the likelihood and impact of cyber attacks.</p>
+        </div>
+    </section>
+
+    <section class="hidden">
+        <div class="prevention-menu">
+            <h1>Prevention Methods</h1>
+            <div class="prevention-box-container">
+    
+                <div class="prevention-box">
+                    <img src="images/password-logo.png">
+                    <h3>Password Protection</h3>
+                    <p>The more complex your password, the more protected your information will be from Cyber threats.</p>
+                    <a id="preventionbtn1" class="open-section-btn">Open</a>
+                </div>
+    
+                <div class="prevention-box">
+                    <img src="images/email-logo-page1.png">
+                    <h3>Spot Phishing Emails</h3>
+                    <p>Spotting Phishing emails before clicking on them is key to defending against these attacks.</p>
+                    <a id="preventionbtn2" class="open-section-btn">Open</a>
+                </div>
+    
+                <div class="prevention-box">
+                    <img src="images/update-logo.png">
+                    <h3>Keep Device up to Date</h3>
+                    <p>Updates contain vital security upgrades that help to protect against bugs and vulnerabilities.</p>
+                    <a id="preventionbtn3" class="open-section-btn">Open</a>
+                </div>
+    
+                <div class="prevention-box">
+                    <img src="images/antivirus-logo.png">
+                    <h3>Antivirus</h3>
+                    <p>Security software helps to detect and remove malicious code if it enters your network.</p>
+                    <a id="preventionbtn4" class="open-section-btn">Open</a>
+                </div>
+    
+                <div class="prevention-box">
+                    <img src="images/firewall-logo.png">
+                    <h3>Firewall</h3>
+                    <p>Firewalls are effective gatekeepers between your computer and the internet, acting as a barrier to
+                        prevent the spread of cyber threats.</p>
+                    <a id="preventionbtn5" class="open-section-btn">Open</a>
+                </div>
+    
+                <div class="prevention-box">
+                    <img src="images/VPN-logo.png">
+                    <h3>VPN</h3>
+                    <p>A Virtual Private Network creates a point-to-point tunnel encrypting your data.</p>
+                    <a id="preventionbtn6" class="open-section-btn">Open</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section class="hidden"> 
+    <div class="page1-section-1" id="password-gen">
+        <div class="generatorGrid-container">
+            <div class="password-info">
+                <div class="password-info-text">
+                    <h1>A Stong password is the first defence against attackers</h1>
+                    <p>A strong password is the cornerstone of digital security, acting as the first line of defense against unauthorized
+                        access to personal and sensitive information. It serves as a barrier, preventing cybercriminals from infiltrating
+                        accounts and networks, thus safeguarding valuable data, financial assets, and privacy. In an era dominated by online
+                        interactions and digital transactions. By incorporating a combination of letters, numbers, and special characters,
+                        and avoiding easily guessable information like names or birthdays, a strong password enhances resilience against
+                        brute-force attacks and hacking attempts.
+                    </p>
+                </div>
+            </div>
+            <div class="generator">
+                <h1>Password Generator</h1>
+    
+                <label class="password-wrap">
+                    <input type="text" id="password" readonly placeholder="Generate a password" />
+                    <button class="material-symbols-outlined" id="copy">content_copy</button>
+                </label>
+    
+                <label>
+                    <span>Password Length:</span>
+                    <input type="number" min="8" max="50" value="16" id="length" />
+                </label>
+    
+                <label>
+                    <span>Include Uppercase Letters (A-Z):</span>
+                    <input type="checkbox" id="uppercase" checked />
+                </label>
+    
+                <label>
+                    <span>Include Lowercase Letters (a-z):</span>
+                    <input type="checkbox" id="lowercase" checked />
+                </label>
+    
+                <label>
+                    <span>Include Numbers (0-9):</span>
+                    <input type="checkbox" id="numbers" checked />
+                </label>
+    
+                <label>
+                    <span>Include Symbols ($-#):</span>
+                    <input type="checkbox" id="symbols" checked />
+                </label>
+    
+                <button type="submit" id="generate">Generate Password</button>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="password.js"></script>
+
+<section class="hidden"> 
+    <div class="page1-section-2" id="phishing-email">
+        <h1>Spot The Difference in these Emails</h1>
+        <div class="spot-the-difference-container">
+            <div class="email-container">
+                <img src="./images/email1.png" id="email1" class="email" alt="email 1">
+            </div>
+            <div class="email-container">
+                <img src="./images/email2.png" id="email2" class="email" alt="email 2">
+            </div>
+        </div>
+        <div id="difference-counter">Difference Found: <span id="counter">0</span></div>
+    </div>
+</section>
+
+<section class="hidden">
+    <div class="page1-section-3" id="software-update">
+        <h1>Device Update</h1>
+        <p> Updating device regularly is important to keep your device safe, running well, and up-to-date with the latest improvements. 
+            To update Your Operating system weather that be windows or mac.</p>
+        <div class="videoGrid-container">
+            <div class="windowsVideo-container">
+                <h2>Windows</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0b3oo9uzgcQ?si=7_StywZm3M-5K9oe"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="MacVideo-container">
+                <h2>Mac</h2>
+                <iframe src="https://www.youtube.com/embed/FG2DXkPA93g?si=hZUqBMYCgrJpAgbe" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="phone-container">
+                <h2>IOS</h2>
+                <ul class="circle-bullets">
+                    <li>Settings: Go to Settings > Update & Security > Backup.</li>
+                    <li>File History Settings: Click on "More options" under Backup, then "Back up now" to start the backup immediately or adjust settings such as backup frequency and files to include/exclude.</li>
+                    <li>External Drive: Connect an external drive and choose it as the backup drive.</li>
+                </ul>
+            </div>
+            <div class="phone-container">
+                <h2>Android</h2>
+                <ul class="circle-bullets">
+                    <li>Check for updates: Go to Settings > General > Advanced > System Software Update. the device will check if there are any available updates for your device.</li>
+                    <li> If an update is available, tap "Download and Install." You may need to enter your passcode if prompted.</li>
+                    <li>The update process may take some time. Ensure your device is plugged in or has sufficient battery life to complete the update. </li>
+                    <li>Once the update is complete, your device will restart. You may need to enter your passcode again.</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="hidden">
+    <div class="page1-section-4" id="anti-virus">
+        <h1>Antivirus</h1>
+        <p>Antivirus software is like a protective shield for your computer, helping to keep it safe and secure from online
+            threats.</p>
+        <div class="AntiVirus-container">
+            
+            <div class="AntiVirus">
+                <img src="images/McAFEE-logo.png" class="rounded-image">
+                <h3>McAfee AntiVirus</h3>
+                <div class="pros">
+                    <h3>Pros:</h3>
+                    <ul>
+                        <li>Perfect lab test scores</li>
+                        <li>Excellent scores in our hands-on tests</li>
+                        <li>Virus protection pledge</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h3>Cons:</h3>
+                    <ul>
+                        <li>Windows-only protection with no volume discount</li>
+                        <li>Many long-standing features now absent</li>
+                    </ul>
+                </div>
+                <a  id="AntiVirusbtn1" class="AntiVirusLink-btn" href="https://www.mcafee.com/consumer/en-us/landing-page/direct/aff/mcafee-antivirus-plus.html" target="_blank">Open Link</a>
+            </div>
+            
+            <div class="AntiVirus" id="Malwarebytes">
+                <img src="images/Malwarebytes-logo.jpg" class="rounded-image">
+                <h3>Malwarebytes Premium</h3>
+                <div class="pros">
+                    <h3>Pros:</h3>
+                    <ul>
+                        <li>Excellent protection against malicious and 
+                            <br> fraudulent sites</li>
+                        <li>Very good scores from independent labs</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h3>Cons:</h3>
+                    <ul>
+                        <li>No features beyond basic antivirus</li>
+                    </ul>
+                </div>
+                <a  id="AntiVirusbtn2" class="AntiVirusLink-btn" href="https://try.malwarebytes.com/get-premium/?cjdata=MXxZfFl8WXww&c=cj&k=13090113&tracking=cj&x-wts=cj&x-affid=1583972&ADDITIONAL_AFFID=cj-1583972&cjevent=acb26b7fec5411ee830de5df0a18ba72&clickid=acb26b7fec5411ee830de5df0a18ba72&pid=cj_int" target="_blank">Open Link</a>
+            </div>
+
+            <div class="AntiVirus" id="Total-Defence">
+                <img src="images/totaldefense-logo.jpg" class="rounded-image">
+                <h3>Total Defence Essential
+                    <br>Anti-Virus
+                </h3>
+                <div class="pros">
+                    <h3>Pros:</h3>
+                    <ul>
+                        <li>Very good defense against malware-hosting 
+                            <br>websites</li>
+                        <li>Effective detection of phishing frauds</li>
+                        <li>Virus-free guarantee</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h3>Cons:</h3>
+                    <ul>
+                        <li>Lower score than last year in our hands-on 
+                            <br>malware protection test</li>
+                        <li>Few test results from independent labs</li>
+                    </ul>
+                </div>
+                <a  id="AntiVirusbtn3" class="AntiVirusLink-btn" href="https://www.totaldefense.com/products/" target="_blank">Open Link</a>
+            </div>
+
+            <div class="AntiVirus" id="trendmicro">
+                <img src="images/trendMicro-logo.png" class="rounded-image">
+                <h3>Trend Micro Antivrus+
+                    <br>Security
+                </h3>
+                <div class="pros">
+                    <h3>Pros:</h3>
+                    <ul>
+                        <li>Layered ransomware protection</li>
+                        <li>Multifaceted browser extension</li>
+                        <li>Many bonus features</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h3>Cons:</h3>
+                    <ul>
+                        <li>Social network protection choices dated</li>
+                        <li>No multi-device volume licensing</li>
+                    </ul>
+                </div>
+                <a  id="AntiVirusbtn4" class="AntiVirusLink-btn" href="https://www.trendmicro.com/en_us/forHome/products/antivirus-plus.html?_ga=2.146786868.1262956734.1658959679-781436749.1648137696" target="_blank">Open Link</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hidden">
+    <div class="page1-section-5" id="Firewall">
+        <h1>Firewall</h1>
+        <p>A firewall acts as a barrier between your computer or network and the internet, only allowing safe things to pass through.</p>
+        <div class="Firewall-container">
+            <div class="Firewall" id="Bitdefender">
+                <img src="images/BitDefender-logo.png" class="rounded-image">
+                <h3>Bitdefender Total Security</h3>
+                <div class="pros">
+                    <h3>Pros:</h3>
+                    <ul>                         
+                        <li>High-end firewall protection</li>
+                        <li>Anti-ransomware protection included</li>
+                        <li>Microphone safeguarding</li>
+                        <li>Up to 5 devices</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h3>Cons:</h3>
+                    <ul>
+                        <li>Some alternatives offer more for your money</li>
+                    </ul>
+                </div>
+                <a  id="Firewallbtn1" class="FirewallLink-btn" href="https://www.bitdefender.co.uk/media/html/consumer/new/2020/cl-offer-opt/?pid=50offer&cid=aff|c|ir" target="_blank">Open Link</a>
+            </div>
+
+            <div class="Firewall" id="Avast">
+                <img src="images/avast-logo.jpg" class="rounded-image">
+                <h3>Avast Premium Security</h3>
+                <div class="pros">
+                    <h3>Pros:</h3>
+                    <ul>
+                        <li>Firewall protection for Windows, Mac, iOS, 
+                            <br> Android devices</li>
+                        <li>Anti-ransomware tools included</li>
+                        <li>Up to 10 devices</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h3>Cons:</h3>
+                    <ul>
+                        <li>Annoying ads</li>
+                    </ul>
+                </div> 
+                <a  id="Firewallbtn2" class="FirewallLink-btn" href="https://www.avast.com/en-gb/premium-security#pc" target="_blank">Open Link</a>
+            </div>
+
+            <div class="Firewall" id="Panda">
+                <img src="images/panda-logo.jpg" class="rounded-image">
+                <h3>Panda Dome Essential</h3>
+                <div class="pros">
+                    <h3>Pros:</h3>
+                    <ul>
+                        <li>Lots of features</li>
+                        <li>Can cover unlimited devices</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h3>Cons:</h3>
+                    <ul>
+                        <li>Interface won't be for everybody</li>
+                    </ul>
+                </div>
+                <a  id="Firewallbtn3" class="FirewallLink-btn" href="https://www.pandasecurity.com/security-promotion/?reg=GB&cjdata=MXxZfDB8WXww&campaign=dome1803&x-hideselection=true&autobilling=no&track=174037&AID=13273702&PID=6361382&SID=trdpro-gb-1408145892884905715&x-cjevent=6f40fde5ebd511ee834c00280a18ba73" target="_blank">Open Link</a>
+            </div>
+
+            <div class="Firewall" id="ZoneAlarm">
+                <img src="images/zoneAlarm-logo.png" class="rounded-image">
+                <h3>ZoneAlarm</h3>
+                <div class="pros">
+                    <h3>Pros:</h3>
+                    <ul>
+                        <li>Easy to use interface</li>
+                        <li>Great antivirus engine</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h3>Cons:</h3>
+                    <ul>
+                        <li>Best features are paid-for</li>
+                    </ul>
+                </div>
+                <a  id="Firewallbtn3" class="FirewallLink-btn" href="https://www.pandasecurity.com/security-promotion/?reg=GB&cjdata=MXxZfDB8WXww&campaign=dome1803&x-hideselection=true&autobilling=no&track=174037&AID=13273702&PID=6361382&SID=trdpro-gb-1408145892884905715&x-cjevent=6f40fde5ebd511ee834c00280a18ba73" target="_blank">Open Link</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="hidden">
+    <div class="page1-section-6" id="VPN">
+            <h1>VPN</h1>
+            <p>a VPN helps keep your online activities private and secure by encrypting your internet connection, making it harder for others to spy on what you're doing.</p>
+        <div class="VPN-container">
+
+            <div class="VPN">
+                <img src="images/NordVPN-Logo.png" class="rounded-image">
+                <h2>NordVPN</h2>
+                <div class="pros">
+                    <h3>Pros:</h3>
+                    <ul>
+                        <li>Multi-hop, split tunneling, and Tor connections</li>
+                        <li>Excellent design</li>
+                        <li>Traffic routing and file-sharing with Meshnet</li>
+                        <li>Built-in antivirus tools</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h3>Cons:</h3>
+                    <ul>
+                        <li>Expensive</li>
+                        <li>Lackluster malware-blocking results</li>
+                        <li>Limited utility of free Meshnet traffic routing</li>
+                    </ul>
+                </div>
+                <a  id="VPNbtn1" class="VPNLink-btn" href="https://nordvpn.com/" target="_blank" >Open Link</a>
+            </div>
+            
+            <div class="VPN" id="Surfshark">
+                <img src="images/Surfshark-logo.jpg" class="rounded-image">
+                <h2>Surfshark VPN</h2>
+                <div class="pros">
+                    <h3>Pros:</h3>
+                    <ul>
+                        <li>Unlimited simultaneous connections</li>
+                        <li>Large global server presence</li>
+                        <li>Multi-hop and split tunneling tools</li>
+                        <li>Intriguing potential in Surfshark Nexus</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h3>Cons:</h3>
+                    <ul>
+                        <li>High monthly price</li>
+                        <li>Some issues with IP rotator feature in testing</li>
+                        <li>Privacy policy needs clarification</li>
+                    </ul>
+                </div>
+                <a  id="VPNbtn2" class="VPNLink-btn" href="https://surfshark.com/" target="_blank" >Open Link</a>
+            </div>
+
+            <div class="VPN" id="ExpressVPN">
+                <img src="images/expressVPN-logo.jpeg" class="rounded-image">
+                <h2>ExpressVPN</h2>
+                <div class="pros">
+                    <h3>Pros:</h3>
+                    <ul>
+                        <li>Large, diversely distributed fleet of servers</li>
+                        <li>Strong privacy and security practices</li>
+                        <li>Split tunneling</li>
+                        <li>Stylish interface</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h3>Cons:</h3>
+                    <ul>
+                        <li>Expensive compared with VPNs with
+                            <br> similar feature sets</li>
+                        <li>No multi-hop connections</li>
+                    </ul>
+                </div>
+                <a  id="VPNbtn3" class="VPNLink-btn" href="https://www.expressvpn.com/" target="_blank" >Open Link</a>
+            </div>
+
+            <div class="VPN" id="Proton">
+                <img src="images/protonvpn-logo.jpg" class="rounded-image">
+                <h2>Proton VPN</h2>
+                <div class="pros">
+                    <h3>Pros:</h3>
+                    <ul>
+                        <li>The best free VPN subscription</li>
+                        <li>Numerous advanced privacy tools</li>
+                        <li>Strong customer privacy stance</li>
+                        <li>Slick, accessible client</li>
+                        <li>Excellent speed test scores</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h3>Cons:</h3>
+                    <ul>
+                        <li>Awkward ChromeOS implementation</li>
+                    </ul>
+                </div>
+                <a  id="VPNbtn4" class="VPNLink-btn" href="https://protonvpn.com/" target="_blank" >Open Link</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+  <!----Footer---->
+  <footer>
+    <div class="footer-content">
+        <h3>Cyber Resiliance</h3>
+        <p>Strengthening Cyber Resilience Through Knowledge and Awareness</p>
+        <ul class="socials">
+            <li><a href="https://github.com/QasimN03/Cyber-Resilience-.git" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright &copy; 2024 Cyber Resiliance. Designed by <span>Qasim Nazir (21380968)</span></p>
+    </div>
+</footer>
+
+
+<!-- prvention methods javascript -->
+<script>
+    const preventionbtn1 = document.getElementById("preventionbtn1");
+    const passwordGen = document.getElementById("password-gen");
+    preventionbtn1.onclick = () => {
+        passwordGen.classList.add("active");
+        passwordGen.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+        phishingEmail.classList.remove("active");
+        antivirus.classList.remove("active");
+        update.classList.remove("active");
+        Firewall.classList.remove("active");
+        VPN.classList.remove("active");
+    };
+
+    const preventionbtn2 = document.getElementById("preventionbtn2");
+    const phishingEmail = document.getElementById("phishing-email");
+    preventionbtn2.onclick = () => {
+        phishingEmail.classList.add("active");
+        phishingEmail.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+        passwordGen.classList.remove("active");
+        update.classList.remove("active");
+        antivirus.classList.remove("active");
+        Firewall.classList.remove("active");
+        VPN.classList.remove("active");
+    };
+
+    const preventionbtn3 = document.getElementById("preventionbtn3");
+    const update = document.getElementById("software-update");
+    preventionbtn3.onclick = () => {
+        update.classList.add("active");
+         update.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+
+        passwordGen.classList.remove("active");
+        phishingEmail.classList.remove("active");
+        antivirus.classList.remove("active");
+        Firewall.classList.remove("active");
+        VPN.classList.remove("active");
+    };
+
+    const preventionbtn4 = document.getElementById("preventionbtn4");
+    const antivirus = document.getElementById("anti-virus");
+    preventionbtn4.onclick = () => {
+        antivirus.classList.add("active");
+        antivirus.scrollIntoView({
+            behavior: "smooth"
+        });
+
+        passwordGen.classList.remove("active");
+        phishingEmail.classList.remove("active");
+        update.classList.remove("active");
+        Firewall.classList.remove("active");
+        VPN.classList.remove("active");
+    };
+
+    const preventionbtn5 = document.getElementById("preventionbtn5");
+    const Firewall = document.getElementById("Firewall");
+    preventionbtn5.onclick = () => {
+        Firewall.classList.add("active");
+        Firewall.scrollIntoView({
+            behavior: "smooth"
+        });
+
+        passwordGen.classList.remove("active");
+        phishingEmail.classList.remove("active");
+        antivirus.classList.remove("active");
+        update.classList.remove("active");
+        VPN.classList.remove("active");
+    };
+
+    const preventionbtn6 = document.getElementById("preventionbtn6");
+    const VPN = document.getElementById("VPN");
+    preventionbtn6.onclick = () => {
+        VPN.classList.add("active");
+        VPN.scrollIntoView({
+            behavior: "smooth"
+        });
+
+        passwordGen.classList.remove("active");
+        phishingEmail.classList.remove("active");
+        antivirus.classList.remove("active");
+        update.classList.remove("active");
+        Firewall.classList.remove("active");
+    };
+</script>
+
+  <!----Javascript---->
+  <script src="javascript.js"> </script>
+  <script defer src="scroll.js"> </script>
+</body>
+<html>
